@@ -110,11 +110,11 @@ invoices/                   Main project folder.
 ## How to install
 Clone the repository
 ```
-git clone https://github.com/code50/15801404/tree/main/invoices
+git clone https://github.com/javiersanser/invoices-ai-reader.git
 ```
 Change the working directory
 ```
-cd invoices
+cd invoices-ai-reader
 ```
 Create a virtual environment and activate it (recommended):
 
@@ -163,11 +163,11 @@ python project.py
 Remember to be inside the root folder, you must see ``` project.py ``` file if you run the ```ls``` command.
 
 ```
-invoices/ $ ls
-data/  image.png  invoices/  project.py  README.md  requirements.txt  test_project.py
+invoices-ai-reader/ $ ls
+data/  invoices/  project.py  README.md  requirements.txt  test_project.py
 ```
 
-Put the pdfs files of the invoices you want to extract the data from, in the ```invoices/``` folder, if your root folder is named also ```invoices``` the correct folder path will be ```invoices/invoices/```
+Put the pdfs files of the invoices you want to extract the data from, in the ```invoices/``` folder.
 
 You could get some invoices files examples in the repo referenced in the [📚References to documentation section](#-references-to-documentation-of-interest) of this same README.md
 
