@@ -1,0 +1,6 @@
+.env
+a11.txt
+invoices/
+data/
+__pycache__/*
+.pytest_cache/*
