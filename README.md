@@ -41,51 +41,7 @@ Other use cases with the necessary tweaks could include automatic archiving and 
 ## 🔀 Flowchart
 
 
-```mermaid
----
-config:
-  theme: neo
----
-flowchart TB
-    Start(["<b>START</b><br>load_dotenv() &amp; genai.Client()"]) --> Menu{"<b>MAIN MENU</b><br>print_main_menu()<br>Select Option"}
-    Menu -- 1 or 2 Show lists --> List[/"Print Lists<br>(Unprocessed / Processed)"/]
-    List --> Menu
-    Menu -- 3 Type single file --> InputFile["User types filename.pdf"]
-    InputFile --> CheckExist{"Already processed?"}
-    CheckExist -- Yes --> Overwrite{{"⚠️ Overwrite?<br>(Y/N)"}}
-    Overwrite -- N --> Menu
-    Overwrite -- Y --> API[["<b>Gemini API</b><br>gemini_parse_invoice()"]]
-    CheckExist -- No --> API
-    Menu -- 4 Bulk Processiong --> Bulk["Loop: get_unprocessed_invoices()"]
-    Bulk --> API
-    API --> Schema["Apply JSON Schema<br>&amp; System Prompt"]
-    Schema --> Response["parsed JSON response"]
-    Response --> Save["save_json_data()<br>(Persist to /data folder)"]
-    Save --> Menu
-    Menu -- 5 Exit Program--> Exit(["<b>EXIT</b><br>client.close()"])
-
-     Start:::main
-     Menu:::logic
-     CheckExist:::logic
-     Overwrite:::logic
-     Overwrite:::warning
-     API:::api
-     Schema:::api
-     Response:::api
-     Exit:::main
-    classDef main fill:#1a1a1a,stroke:#00e5ff,stroke-width:2px,color:#fff
-    classDef logic fill:#2d2d2d,stroke:#555,stroke-width:1px,color:#ccc
-    classDef api fill:#4a148c,stroke:#7b1fa2,stroke-width:2px,color:#fff
-    classDef warning fill:#ffd600,stroke:#f57f17,stroke-width:1px,color:#000
-    style Start fill:#ffffff,stroke:#000000,color:#000000
-    style Menu fill:#ffffff,color:#000000,stroke:#000000,stroke-width:4px,stroke-dasharray: 0
-    style CheckExist fill:#ffffff,color:#000000,stroke-width:4px,stroke-dasharray: 0
-    style Overwrite fill:#FFD600
-    style API fill:#00e5ff,color:#333,stroke:#000000
-    style Schema fill:#00e5ff,color:#000,stroke:#000000
-    style Response fill:#00e5ff,stroke:#000000,color:#333
-    style Exit fill:#ffffff,color:#000000,stroke:#D50000
-```
+![Flowchart](Invoices-AI-Reader-Flowchart.svg)
 
 *Diagram made with mermaid.ai*
 <br><br>
