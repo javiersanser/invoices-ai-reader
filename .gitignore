@@ -1,6 +1,8 @@
 .env
 a11.txt
-invoices/
-data/
+invoices/*
+!invoices/.gitkeep
+data/*
+!data/.gitkeep
 __pycache__/*
 .pytest_cache/*
