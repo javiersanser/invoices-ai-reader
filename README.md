@@ -6,7 +6,7 @@
 
 
 ## 📹 Video Demo
-You can watch a video here: <URL HERE> #PENDING URL
+You can watch a video here: [Invoices AI Reader](https://youtu.be/3Bo6LmulKzw)
 ## 🧾 Description:
 
 **Invoices AI Reader** reads invoices files in pdf format, extracting the relevant information of the document for accounting purposes as:
@@ -63,7 +63,7 @@ invoices/                   Main project folder.
     └── ...
 ```
 <br><br>
-## How to install
+## 💻How to install
 Clone the repository
 ```
 git clone https://github.com/javiersanser/invoices-ai-reader.git
@@ -102,7 +102,7 @@ For security reasons this file is not provided, instead you could use the provid
 GEMINI_API_KEY = YOUR API KEY
 ```
 
-## How to launch and use the program
+## ▶ How to launch and use the program
 
 Once you had setup the API KEY in your ```.env``` file, save the file in the root directory of the program.
 

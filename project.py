@@ -217,7 +217,7 @@ def save_json_data(d, json_file_name, write_mode = "x"):
 
     except FileExistsError:
         print("❌ The file name already exists")
-    # pending implementation of prompting the user if he wants to overwrite the file or do nothing.
+
 
 def get_gemini_prompt():
     ''' returns the system prompt to be passed to the AI model'''
@@ -238,7 +238,7 @@ def get_invoices_pdf_list():
     return files
 
 def get_invoices_json_list():
-    ''' Returns a python list object with the list of files in the invoices/ folder wich contains the files we want to extract data from.'''
+    ''' Returns a python list object with the list of files in the data/ folder wich contains the files with extracted data in json format'''
     files = os.listdir("data")
     return files
 
